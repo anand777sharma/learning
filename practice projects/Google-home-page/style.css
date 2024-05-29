@@ -1,0 +1,120 @@
+body{
+    background-color: #090909;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+
+}
+
+header nav ul li {
+    list-style: none;
+    padding-left: 30px;
+    font-size: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+header .profile-image {
+   height: 35px;
+   width: 35px;
+   border-radius: 50%;
+
+}
+
+/* footer */
+
+.footer-links{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    font-size: 1rem;
+  
+}
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.title-container{
+    text-align: center;
+}
+.title-container h1{
+color:#eeeeee;
+font-size: 85px;
+font-weight: 400;
+font-family: Arial, sans-serif;
+}
+.inputfield{
+    background-color: #fff;
+    max-width: 561px;
+    min-height: 44px;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.inputfield input{
+ width: 75%;
+ border: none;
+ font-size: 1rem;
+ 
+}
+.inputfield input:focus{
+ /* width: 75%; */
+ outline: none;
+ 
+}
+.inputfield i{
+font-size: 1.3rem;
+}
+
+.grid-item{
+    max-width: 112px;
+    min-height: 112px;
+    background-color: #222;
+    border-radius: 5px;
+    position: relative;
+}
+.option-button{
+    float: right;
+    background-color: rgba(145, 70, 70, 0);
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50%;
+    margin: 5px ;
+    opacity: 0;
+}
+.icon-circle{
+    max-width: 48px;
+    min-height: 48px;
+    background-color: #3f484a;
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.box-icon{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    translate: 50% 50%;
+}
+.box-icon p{
+    padding: 0;
+    color: white;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chase the Baal</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #game-area {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid #000;
+            background-color: #fff;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        #baal {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #info {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-area">
+        <div id="baal"></div>
+    </div>
+    <div id="info">
+        <div>Time: <span id="timer">0</span> seconds</div>
+        <div>Last Click Duration: <span id="click-duration">N/A</span> seconds</div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gameArea = document.getElementById('game-area');
+            const baal = document.getElementById('baal');
+            const timerDisplay = document.getElementById('timer');
+            const clickDurationDisplay = document.getElementById('click-duration');
+
+            let startTime = Date.now();
+            let lastClickTime = startTime;
+
+            // Function to update the timer
+            function updateTimer() {
+                const currentTime = Date.now();
+                const elapsedTime = ((currentTime - startTime) / 1000).toFixed(1);
+                timerDisplay.textContent = elapsedTime;
+            }
+
+            // Function to move the ball to a random position within the game area
+            function moveBaal() {
+                const areaWidth = gameArea.clientWidth;
+                const areaHeight = gameArea.clientHeight;
+                const baalWidth = baal.offsetWidth;
+                const baalHeight = baal.offsetHeight;
+
+                const maxX = areaWidth - baalWidth;
+                const maxY = areaHeight - baalHeight;
+
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+
+                baal.style.left = `${randomX}px`;
+                baal.style.top = `${randomY}px`;
+            }
+
+            // Move the ball when it's clicked and update the click duration
+            baal.addEventListener('click', () => {
+                const currentTime = Date.now();
+                const clickDuration = ((currentTime - lastClickTime) / 1000).toFixed(1);
+                clickDurationDisplay.textContent = clickDuration;
+                lastClickTime = currentTime;
+                moveBaal();
+            });
+
+            // Initialize the ball position and timer
+            moveBaal();
+            setInterval(updateTimer, 100);
+        });
+    </script>
+</body>
+</html>
