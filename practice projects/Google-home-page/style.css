@@ -80,13 +80,28 @@ font-family: Arial, sans-serif;
 .inputfield i{
 font-size: 1.3rem;
 }
+.bookmark-grid{
+    /* background-color: aqua; */
+    margin-top: 10px;
+    max-width: 530px;
+    display: flex;
+    gap: 10px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+  
 
+}
 .grid-item{
-    max-width: 112px;
+    min-width: 112px;
     min-height: 112px;
-    background-color: #222;
-    border-radius: 5px;
+       border-radius: 5px;
     position: relative;
+}
+.grid-item:hover{
+   
+    background-color: #222;
+  
 }
 .option-button{
     float: right;
