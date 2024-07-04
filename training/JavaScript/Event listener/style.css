@@ -1,0 +1,40 @@
+*{
+    padding: 0;margin: 0;
+}
+body{
+    background-color: #222;
+}
+h1{
+    color: aliceblue;
+    font-size: 40px;
+    font-family: cursive;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: brown;
+    height: 50px;
+    width:50px;
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    font-weight: 900;
+    font-family: serif;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.color-card{
+    height: 10rem;
+    width:  10rem;
+    background-color: aqua;
+    border-radius: 8px; margin: 8px;
+}

@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.accordion {
+    max-width: 420px;
+    background-color: bisque;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}

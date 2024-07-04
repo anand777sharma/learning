@@ -1,0 +1,59 @@
+
+#naam1{
+    color: rgb(252, 33, 17);
+}
+/* dot "." used to select Class */
+.naam1{
+    color: rgb(17, 252, 60);
+}
+.naam1{
+    color: rgb(252, 33, 17);
+}
+.naam1{
+    color: rgb(17, 252, 217);
+}
+.naam1{
+    color: rgb(252, 221, 17);
+}
+.naam1{
+    color: rgb(252, 17, 201);
+}
+/* hash "#" used to select ID */
+
+h1 {
+    color: aqua;
+    background-color: blue;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    max-width: fit-content;
+}
+
+ul{
+    color: pink;
+    background-color: orange;
+    max-width: fit-content;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    font-size: 32px;
+}
+
+li{
+    /* background-color: aquamarine;
+    margin: 20px; */
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 0, 255);
+}
+ul>li>div{
+    background-color: rgb(42, 245, 211);
+    color: rgb(24, 16, 1);
+}
+
+div{
+    background-color: red;
+    color: wheat;
+}
+
+
+

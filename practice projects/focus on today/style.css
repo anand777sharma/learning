@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #f2f8ed;
+    margin: 0;padding: 0;
+    font-family: cursive;
+   
+   
+}
+main{
+    padding: 16px;
+}
+h1{
+    font-size: 60px;
+   
+    text-align: center;
+}
+h1 span{
+   color: #48a300;
+}
+.progress-bar-container{
+    height: 30px;
+    background-color: #e8f2e1;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.progress{
+    height: 100%;
+    width: 0%;
+    background-color: #48a300;
+    border-radius: 40px;
+    transition: width 0.3s ease-in-out;
+}
+.progress-value{
+    margin: 0;
+    font-size: 12px;
+   padding: 5px 20px;
+   color: #e8f2e1;
+   min-width: max-content;
+}
+.error{
+    color:red;
+    opacity: 0;
+    font-size: 14px;
+}
+.show-error{
+    opacity: 1;
+}
+.task-card{
+    background-color: #fbfbfb;
+    max-width: 660px;
+    margin-inline: auto;
+    border-radius: 15px;
+    padding: 32px 48px;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
+  
+}
+.goal-container{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 17px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 22px;
+    background-color: #ffffff;
+    margin-bottom: 42px;
+}
+.custom-checkbox{
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(97, 72, 28, 0.3);
+    border-radius: 50%;
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.custom-checkbox .check-icon{
+  display: none;
+}
+.true .custom-checkbox{
+  background-color: #48a300;
+  border: none;
+}
+.true .custom-checkbox+input{
+ text-decoration: line-through;
+ color: #48a300;
+}
+.true .custom-checkbox .check-icon{
+  background-color: #48a300;
+  border: none;
+  display: block;
+}
+.check-icon{
+    /* display: none; */
+}
+input{
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    width: 100%;
+
+}
+.goal-input::placeholder{
+    color: #d8d8d8;
+}
+.quote{
+    text-align: center;
+    margin: 50px auto;
+    max-width: 550px;
+}
+.quote span{
+    font-size: 16px;
+    /* text-align: center; */
+
+    float: right;
+   color: #48a300;
+}
+.footer{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 80px;
+    color: #48a300
+}
+
+@media (max-width: 768px) {
+    .custom-checkbox {
+        width: 25px;
+        height: 25px;
+    }
+    .check-icon
+{font-size: 16px;}
+    .task-card{
+      
+        padding: 16px 20px;
+      
+    }
+
+}
